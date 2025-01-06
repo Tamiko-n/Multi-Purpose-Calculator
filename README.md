@@ -1,15 +1,16 @@
 # 🧮 Multi-Purpose Calculator
 
-Welcome to the **Multi-Purpose Calculator**, a versatile web application designed to handle a variety of calculations. Whether you're solving basic math problems, performing advanced scientific operations, or converting units, this app has got you covered! 🚀
-
+Welcome to the **Multi-Purpose Calculator**, a versatile web application designed to handle a variety of calculations. Whether you're solving basic math problems, performing advanced scientific operations, or converting currencies, this app has got you covered! 🚀
 ---
 
 ## 🌟 Features
 
 - 🔢 **Basic Arithmetic**: Addition, subtraction, multiplication, and division.
 - 📐 **Scientific Calculator**: Advanced functions like trigonometry, logarithms, and exponentiation.
-- 🌡️ ****: Convert units for length, weight, temperature, and more.
-- 📝 **History Tracking**: Keep a record of your previous calculations.
+- 🎫 **Tax Calculator**: Calculate your annual tax.
+- 📝 **GPA Calculator**: Easy to calculate GPA.
+- 💸 **Currency Calculator**: Calculate upto 20 countries currencies.
+- 📝 **Age Calculator**: Calculate age.
 - 📱 **Responsive Design**: Fully mobile-friendly and optimized for all devices.
 
 ---
@@ -31,6 +32,7 @@ Experience the app in action:
 ---
 
 ## 📂 Project Structure
+Same for every calculator.
 
 - `index.html` – Main HTML file for the app.
 - `style.css` – CSS file for styling.
