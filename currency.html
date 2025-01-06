@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - CalcHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculator-styles.css">
+    <style>
+        /* Container to hold the two inputs side by side */
+.currency-row {
+    display: flex;
+    justify-content: space-between; /* Space out the input boxes */
+    gap: 20px; /* Adjust the gap between the inputs */
+    margin-bottom: 20px; /* Optional: Add space below */
+}
+
+/* Style the container for each currency input box */
+.currency-input-container {
+    width: 48%; /* Make each input container take up half of the row */
+    display: flex;
+    flex-direction: column; /* Stack select and input elements vertically */
+}
+
+/* General styles for input and select elements */
+.currency-input,
+.currency-select {
+    width: 100%; /* Make the input and select elements stretch to their container's width */
+    padding: 12px; /* Add padding for better usability */
+    font-size: 16px; /* Increase font size for readability */
+    border: 1px solid #d4af37; /* Gold border */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+}
+
+/* Style for input elements */
+.currency-input {
+    height: 45px; /* Adjust height for better visibility */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+
+/* Style for select elements */
+.currency-select {
+    height: 45px; /* Match input height */
+    background-color: #f9f9f9; /* Light background for dropdowns */
+    color: #000; /* Black text */
+}
+
+/* Style for read-only input */
+.currency-input[readonly] {
+    background-color: #e9e9e9; /* Light grey background for readonly fields */
+    color: #333; /* Dark grey text */
+    cursor: not-allowed; /* Indicate it's not editable */
+}
+
+/* Optional: Add hover effect */
+.currency-input:hover,
+.currency-select:hover {
+    border-color: #fff; /* White border on hover */
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">CalcHub</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="simple.html">Simple</a></li>
+                <li><a href="scientific.html">Scientific</a></li>
+                <li><a href="tax.html">Tax</a></li>
+                <li><a href="gpa.html">GPA</a></li>
+                <li><a href="currency.html">Currency</a></li>
+                <li><a href="age.html">Age</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="calculator-container">
+            <h2 class="calculator-title">Currency Converter</h2>
+            <div class="currency-converter">
+                <div class="currency-row">
+                    <select id="from-currency" class="currency-select">
+                        <!-- Currency options will be added by JavaScript -->
+                    </select>
+                    <input type="number" id="amount" class="currency-input" placeholder="Amount" value="1">
+                </div>
+                
+                <div class="currency-row">
+                    <select id="to-currency" class="currency-select">
+                        <!-- Currency options will be added by JavaScript -->
+                    </select>
+                    <input type="text" id="result" class="currency-input" readonly>
+                </div>
+                
+                <button onclick="convertCurrency()" class="calculator-button">Convert</button>
+                
+                <div id="exchange-rate" class="result"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CalcHub. Made By Tamia Naeem.</p>
+    </footer>
+
+    <script src="currency.js"></script>
+</body>
+</html>

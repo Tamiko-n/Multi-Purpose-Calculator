@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator - CalcHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculator-styles.css">
+    <style>
+/* Style for the age calculator form */
+.age-calculator {
+    background-color: #34495e;  /* Slightly lighter background for the form */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);  /* Shadow effect */
+    width: 350px;  /* Adjust the width of the form */
+    text-align: center;
+}
+
+/* Style for the input groups (labels and inputs) */
+.calculator-input-group {
+    margin-bottom: 20px;  /* Space between each input group */
+}
+
+/* Style for the labels (Birth Date, Current Date) */
+.calculator-input-group label {
+    display: block;
+    font-size: 1.2rem;
+    color: white;  /* White text for the labels */
+    margin-bottom: 1rem;
+}
+
+/* Remove the default calendar icon */
+.date-input::-webkit-calendar-picker-indicator {
+   
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 16px;  /* Set the size of the icon */
+    border: none;
+}
+
+.date-input {
+    background-repeat: no-repeat;
+    background-position: right 10px center;  /* Position the icon */
+    background-size: 20px 20px;  /* Set the size of the custom icon */
+}
+
+.date-input {
+    background-color: black;  /* Black background */
+    color: white;  /* White text */
+    font-size: 1rem;
+    padding: 1rem;
+    border: 2px solid #f1c40f;  /* Golden border color */
+    border-radius: 8px;
+    width: 100%;  /* Full width of the container */
+    transition: all 0.3s ease;  /* Smooth transition for the glow effect */
+    position: relative;  /* Allows for positioning the icon */
+    text-align: center;
+}
+
+/* Remove the default calendar icon */
+.date-input::-webkit-calendar-picker-indicator {
+    background: transparent;  /* Hide the default icon */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 16px;  /* Set the size of the icon */
+    border: none;
+}
+
+
+/* Focus effect with golden glow */
+.date-input:focus {
+    outline: none;  /* Remove default focus outline */
+    box-shadow: 0 0 8px 2px #f1c40f;  /* Golden glow */
+    border: 2px solid #f39c12;  /* Darker golden border on focus */
+}
+
+/* Style for the calculate button */
+.calculator-button {
+    background-color: #f39c12;  /* Golden button background */
+    color: white;  /* White text */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Hover effect for the button */
+.calculator-button:hover {
+    background-color: #e67e22;  /* Darker golden on hover */
+}
+
+/* Style for the result container */
+#age-result {
+    background-color: #000000;  /* Attractive teal background */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    display: none;  /* Hide initially */
+}
+
+/* Style for the result text */
+#age-result p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Style for the result labels (Years, Months, Days) */
+#age-result span {
+    color: #f1c40f;  /* Golden color for the result values */
+}
+@media (max-width: 480px) {
+    .age-calculator{
+    background-color: #34495e;  /* Slightly lighter background for the form */
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);  /* Shadow effect */
+    text-align: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">CalcHub</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="simple.html">Simple</a></li>
+                <li><a href="scientific.html">Scientific</a></li>
+                <li><a href="tax.html">Tax</a></li>
+                <li><a href="gpa.html">GPA</a></li>
+                <li><a href="currency.html">Currency</a></li>
+                <li><a href="age.html">Age</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="calculator-container">
+            <h2 class="calculator-title">Age Calculator</h2>
+            <div class="age-calculator">
+                <div class="calculator-input-group">
+                    <label for="birthdate">Birth Date:</label>
+                    <input type="date" id="birthdate" class="date-input">
+                </div>
+
+                <div class="calculator-input-group">
+                    <label for="currentdate">Current Date:</label>
+                    <input type="date" id="currentdate" class="date-input" readonly>
+                </div>
+                
+                <button onclick="calculateAge()" class="calculator-button">Calculate Age</button>
+                
+                <div id="age-result" class="result">
+                    <p>Years: <span id="years">0</span></p>
+                    <p>Months: <span id="months">0</span></p>
+                    <p>Days: <span id="days">0</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 CalcHub. Made By Tamia Naeem.</p>
+    </footer>
+
+    <script src="age.js"></script>
+</body>
+</html>

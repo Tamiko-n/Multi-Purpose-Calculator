@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Calculator Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<style>
+    h1 ,p{
+    color: #d4af37;
+}
+</style>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">CalcHub</a>
+            </div>
+          
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="simple.html">Simple</a></li>
+                <li><a href="scientific.html">Scientific</a></li>
+                <li><a href="tax.html">Tax</a></li>
+                <li><a href="gpa.html">GPA</a></li>
+                <li><a href="currency.html">Currency</a></li>
+                <li><a href="age.html">Age</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="home-content">
+        <h1>Welcome to CalcHub</h1>
+        <p class="tagline">Your All-in-One Calculator Solution</p>
+        
+        <div class="calculator-grid">
+            <div class="calc-card" onclick="window.location.href='simple.html'">
+                <h2>Simple Calculator</h2>
+                <p>Basic arithmetic operations for everyday calculations</p>
+            </div>
+            <div class="calc-card" onclick="window.location.href='scientific.html'">
+                <h2>Scientific Calculator</h2>
+                <p>Advanced mathematical functions and operations</p>
+            </div>
+            <div class="calc-card" onclick="window.location.href='tax.html'">
+                <h2>Tax Calculator</h2>
+                <p>Calculate income tax and other tax-related computations</p>
+            </div>
+            <div class="calc-card" onclick="window.location.href='gpa.html'">
+                <h2>GPA Calculator</h2>
+                <p>Calculate your Grade Point Average easily</p>
+            </div>
+            <div class="calc-card" onclick="window.location.href='currency.html'">
+                <h2>Currency Converter</h2>
+                <p>Convert between different currencies worldwide</p>
+            </div>
+            <div class="calc-card" onclick="window.location.href='age.html'">
+                <h2>Age Calculator</h2>
+                <p>Calculate exact age between two dates</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CalcHub. Made By Tamia Naeem.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+

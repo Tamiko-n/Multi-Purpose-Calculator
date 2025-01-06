@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator - CalcHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculator-styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">CalcHub</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="simple.html">Simple</a></li>
+                <li><a href="scientific.html">Scientific</a></li>
+                <li><a href="tax.html">Tax</a></li>
+                <li><a href="gpa.html">GPA</a></li>
+                <li><a href="currency.html">Currency</a></li>
+                <li><a href="age.html">Age</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="calculator-container">
+            <h2 class="calculator-title">Scientific Calculator</h2>
+            <div class="scientific-calculator">
+                <input type="text" id="scientific-display" readonly>
+                <div class="scientific-keypad">
+                    <button onclick="clearScientific()">C</button>
+                    <button onclick="calculateSquareRoot()">√</button>
+                    <button onclick="calculatePower()">x²</button>
+                    <button onclick="calculateSin()">sin</button>
+                    <button onclick="calculateCos()">cos</button>
+                    
+                    <button onclick="appendToScientific('7')">7</button>
+                    <button onclick="appendToScientific('8')">8</button>
+                    <button onclick="appendToScientific('9')">9</button>
+                    <button onclick="appendToScientific('/')">/</button>
+                    <button onclick="calculateTan()">tan</button>
+                    
+                    <button onclick="appendToScientific('4')">4</button>
+                    <button onclick="appendToScientific('5')">5</button>
+                    <button onclick="appendToScientific('6')">6</button>
+                    <button onclick="appendToScientific('*')">×</button>
+                    <button onclick="calculateLog()">log</button>
+                    
+                    <button onclick="appendToScientific('1')">1</button>
+                    <button onclick="appendToScientific('2')">2</button>
+                    <button onclick="appendToScientific('3')">3</button>
+                    <button onclick="appendToScientific('-')">-</button>
+                    <button onclick="calculateLn()">ln</button>
+                    
+                    <button onclick="appendToScientific('0')">0</button>
+                    <button onclick="appendToScientific('.')">.</button>
+                    <button onclick="calculateScientific()">=</button>
+                    <button onclick="appendToScientific('+')">+</button>
+                    <button onclick="calculatePi()">π</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CalcHub. Made By Tamia Naeem.</p>
+    </footer>
+
+    <script src="scientific.js"></script>
+</body>
+</html>

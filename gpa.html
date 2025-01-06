@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator - CalcHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculator-styles.css">
+    <style>
+        body, nav a, .calculator-title, label, p, button {
+            color: #d4af37;
+        }
+    
+        nav a:hover {
+            color: #fff;
+        }
+    
+        footer p {
+            color: black;
+        }
+        input {
+    background-color: black; 
+    color: white;           
+    border: 2px solid #d4af37;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #fff; 
+}
+
+    
+        .calculator-button {
+            background-color: black;
+            color: #0c0c0c;
+            border: 1px solid #d4af37;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    
+        .calculator-button:hover {
+            background-color: #d4af37;
+            color: black;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">CalcHub</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="simple.html">Simple</a></li>
+                <li><a href="scientific.html">Scientific</a></li>
+                <li><a href="tax.html">Tax</a></li>
+                <li><a href="gpa.html">GPA</a></li>
+                <li><a href="currency.html">Currency</a></li>
+                <li><a href="age.html">Age</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="calculator-container">
+            <h2 class="calculator-title">GPA Calculator</h2>
+            <div class="gpa-calculator">
+                <div id="courses-container">
+                    <!-- Course rows will be added here -->
+                    
+                </div>
+                
+                <button onclick="addCourse()" class="calculator-button">Add Course</button>
+                <button onclick="calculateGPA()" class="calculator-button">Calculate GPA</button>
+                
+                <div id="gpa-result" class="result">
+                    <p>Your GPA: <span id="final-gpa">0.00</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p style="color: #d4af37;">&copy; 2024 CalcHub. Made By Tamia Naeem.</p>
+    </footer>
+
+    <script src="gpa.js"></script>
+</body>
+</html>
