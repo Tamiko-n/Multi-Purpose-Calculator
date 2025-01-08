@@ -31,8 +31,8 @@ let exchangeRates = {};
 
 async function fetchExchangeRates() {
     try {
-        // Replace with your own API key or URL
-        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD'); // For example, ExchangeRate-API
+        // API key 
+        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD'); 
         const data = await response.json();
         
         if (data && data.rates) {
